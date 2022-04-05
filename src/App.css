@@ -48,3 +48,16 @@ padding-right: 8%;
 .catalogo{
   margin: 4%;
 }
+
+.counter{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5%;
+  border: 1px solid black;
+  width: 10em;
+  height: 5em;
+}
+  .counter button{
+    margin: 1%;
+    }
