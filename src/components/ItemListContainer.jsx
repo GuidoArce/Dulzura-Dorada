@@ -2,7 +2,10 @@ import customFetch from "../utils/customFetch.js";
 import {useEffect, useState} from 'react';
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList.jsx";
+import '../App.css';
 const {products} = require ("../utils/products.js")
+
+
 
 const Catalogo = ({greeting}) => {
     const [datos, setDatos] = useState ([]);
@@ -20,7 +23,9 @@ const Catalogo = ({greeting}) => {
     return (
         <>
         <h1>{greeting}</h1>
-        <ItemList items={datos}/>
+        <div className="container">
+            <ItemList items={datos}/>
+        </div>
         <ItemCount stock={5} initial={1} onAdd={onAdd}/>
         </>
     )

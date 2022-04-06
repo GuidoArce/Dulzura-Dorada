@@ -2,15 +2,13 @@ import '../App.css';
 
 const Item = ({title, price, photo}) => {
     return (
-        <>
+        <div className='card tarjeta'>
+            <img src={photo} alt="Foto del Producto"/>
             <div>
-                <img className="fotoProducto" src={photo} alt="Foto del Producto"/>
-            </div>
-            <div>
-                <p>{title}</p>
+                <h4>{title}</h4>
                 <p>$ {price}</p>
             </div>
-        </>
+        </div>
     );
 }
 
