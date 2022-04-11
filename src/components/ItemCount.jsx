@@ -30,8 +30,8 @@ const ItemCount = ({ stock = 5, initial = 1, onAdd}) => {
             <IconButton onClick={decrement}><RemoveCircleIcon/></IconButton>
             {
                 stock
-                ? <IconButton variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</IconButton>
-                : <IconButton variant="contained" disabled>Add to Cart</IconButton>
+                ? <button className='boton' onClick={() => onAdd(count)}>añadir al carrito</button>
+                : <button className='boton' disabled>añadir al carrito</button>
             }
         </div>
     );

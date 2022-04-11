@@ -1,11 +1,12 @@
 import '../App.css';
+
 import SimpleBadge from './CartWidget.jsx'
 
 function Navbar() {
   return (
     <>
     <nav className="nav">
-      <p className='logo'>LOGO</p>
+      <img  className='logo' src='../../images/logo.png' alt='logo'></img>
       <div className='navegador'>
         <a href='#'>Nuestra historia</a>
         <a href='#'>Productos</a>
@@ -15,6 +16,7 @@ function Navbar() {
       <SimpleBadge />
       </div>
     </nav>
+    <img className='honeyDrop' src='../../images/wave.svg'></img>
     </>
   );
 }

@@ -1,24 +1,27 @@
-const productos = [
+const products = [
     {
         "id": 1,
         "name": '1Kg de Miel',
         "price": 1500,
-        "img": "../../images/1kg.jpg"
+        "description": '1kg de la mejor miel natural de las sierras de Tandil',
+        "image": "../../images/1kg.jpg"
     },
     {
         "id": 2,
         "name": '500gr de Miel',
         "price": 800,
-        "img": "../../images/500gr.jpg"
+        "description": '500gr de la mejor miel natural de las sierras de Tandil',
+        "image": "../../images/500gr.jpg"
     },
     {
         "id": 3,
         "name": 'Caramelos de Propoleo',
         "price": 350,
-        "img": "../../images/caramelos.png"
+        "description": 'Riquisimos caramelos elaborados con propoleo y miel natural de nuestras colmenas.',
+        "image": "../../images/caramelos.png"
     }
 ]
 
 module.exports = {
-    productos
+    products,
 }
