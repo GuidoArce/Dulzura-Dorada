@@ -1,6 +1,6 @@
 const products = [
     {
-        "id": 1,
+        "id": "1kg",
         "name": '1Kg de Miel',
         "price": 1500,
         "description": '1kg de la mejor miel natural de las sierras de Tandil',
@@ -8,7 +8,7 @@ const products = [
         "categoryId": 1
     },
     {
-        "id": 2,
+        "id": "500gr",
         "name": '500gr de Miel',
         "price": 800,
         "description": '500gr de la mejor miel natural de las sierras de Tandil',
@@ -16,7 +16,7 @@ const products = [
         "categoryId": 1
     },
     {
-        "id": 3,
+        "id": "caramelos",
         "name": 'Caramelos de Propoleo',
         "price": 350,
         "description": 'Riquisimos caramelos elaborados con propoleo y miel natural de nuestras colmenas.',
