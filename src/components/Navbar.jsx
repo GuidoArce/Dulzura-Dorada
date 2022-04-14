@@ -1,16 +1,16 @@
 import '../App.css';
-
+import {Link} from 'react-router-dom'
 import SimpleBadge from './CartWidget.jsx'
 
 function Navbar() {
   return (
     <>
     <nav className="nav">
-      <img  className='logo' src='../../images/logo.png' alt='logo'></img>
+      <Link to='/'><img  className='logo' src='../../images/logo.png' alt='logo'></img></Link>
       <div className='navegador'>
-        <a href='#'>Nuestra historia</a>
-        <a href='#'>Productos</a>
-        <a href='#'>Galeria</a>
+        <Link to='/category/1'>miel</Link>
+        <Link to='/category/2'>caramelos</Link>
+        <Link to='/Galery'>galeria</Link>
       </div>
       <div className='carrito'>
       <SimpleBadge />
