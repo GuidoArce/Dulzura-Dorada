@@ -1,9 +1,14 @@
 import ItemCount from "./ItemCount";
 import '../App.css';
+import { useState } from "react";
+import BtnCart from "./BtnCart";
 
 const ItemDetail = ({item}) => {
+    const [itemCount, setItemCount] = useState(0);
+
     const onAdd = (unidad) => {
-        alert ("Has seleccionado " + unidad + " productos.")
+        alert("Se han añadido " + unidad + " objetos al carrito")
+        setItemCount(unidad);
     }
 
     return (
@@ -20,7 +25,11 @@ const ItemDetail = ({item}) => {
                     <br/>
                     <p>$ {item.price}</p>
                     <br/>
-                    <ItemCount initial={1} onAdd={onAdd}/>
+                    {
+                        itemCount === 0
+                        ?<ItemCount initial={itemCount} onAdd={onAdd}/>
+                        :<BtnCart/>
+                    }
                 </div>
             </section>
             : <p>Cargando...</p>

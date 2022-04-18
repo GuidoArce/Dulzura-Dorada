@@ -4,6 +4,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer';
 import Galery from '../components/Galery';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Cart from '../components/Cart'
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
                 <Route path='/category/:idCategory' element={<Catalogo/>}/>
                 <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
                 <Route path='/Galery' element={<Galery/>}/>
+                <Route path='/Cart' element={<Cart/>}></Route>
             </Routes>
         <Footer/>
         </BrowserRouter>

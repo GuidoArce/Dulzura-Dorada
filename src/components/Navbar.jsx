@@ -1,6 +1,7 @@
 import '../App.css';
 import {Link} from 'react-router-dom'
 import SimpleBadge from './CartWidget.jsx'
+import SearchForm from './SearchForm';
 
 function Navbar() {
   return (
@@ -13,10 +14,11 @@ function Navbar() {
         <Link to='/Galery'>galeria</Link>
       </div>
       <div className='carrito'>
+      <SearchForm/>
       <SimpleBadge />
       </div>
     </nav>
-    <img className='honeyDrop' src='../../images/wave.svg'></img>
+    <img className='honeyDrop' src='../../images/wave.svg' alt='waves'></img>
     </>
   );
 }

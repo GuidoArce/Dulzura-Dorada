@@ -47,9 +47,10 @@ body{
 .carrito{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex: 1;
 }
+
 
 .navegador a{
 list-style-type: none;
@@ -70,9 +71,8 @@ letter-spacing: 1.5px;
   margin-top: -.2rem;
 }
 
-.honeyUp{
-  transform: rotate(180deg);
-  margin-bottom: -1rem;
+.footer{
+  height: 100px;
 }
 
 .counter{

@@ -1,7 +1,11 @@
+import '../App.css'
+
 const Footer = () => {
     return (
-        <img className="honeyUp" src="../images/wave.svg" alt="footer" />
+        <>
+        <div className="footer"></div>
+        </>
     )
 }
 
-export default Footer;
+export default Footer
