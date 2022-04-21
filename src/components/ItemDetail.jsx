@@ -1,20 +1,23 @@
 import ItemCount from "./ItemCount";
 import '../App.css';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import BtnCart from "./BtnCart";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext);
 
-    const onAdd = (unidad) => {
-        alert("Se han añadido " + unidad + " objetos al carrito")
-        setItemCount(unidad);
+    const onAdd = (cantidad) => {
+        alert("Se han añadido " + cantidad + " objetos al carrito")
+        setItemCount(cantidad);
+        test.addToCart(item, cantidad)
     }
 
     return (
         <>
         {
-            item.image
+            item && item.image
             ?
             <section className="itemDetail">
                 <img className="itemDetailImg" src={item.image} alt='foto del producto'/>

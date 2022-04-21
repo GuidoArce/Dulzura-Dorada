@@ -96,6 +96,7 @@ letter-spacing: 1.5px;
   transition:800ms ease all;
   outline:none;
   text-transform: uppercase;
+  padding: 2px;
 }
 .boton:hover{
   background:#fcc522;
@@ -122,19 +123,17 @@ letter-spacing: 1.5px;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
   height: 430px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
   margin-bottom: 5rem;
   text-transform: uppercase;
+  flex: 8;
 }
   .container .card{
     width: 260px;
-    height: 475px;
+    height: 490px;
     border-radius: 8px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -170,9 +169,15 @@ letter-spacing: 1.5px;
   .container .card p a{
     text-decoration: none;
     color: #000;
-    margin-left: 50px;
   }
 
+  .infoCard{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+    .infoCard button{
+      margin-top: .5em;
+    }
 
 .itemDetail{
   display: flex;
@@ -205,3 +210,54 @@ letter-spacing: 1.5px;
     .galery img:hover{
       transform: scale(1.1);
     }
+
+
+.productos{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.filtro{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex: 2;
+  margin-top: 1rem;
+}
+  .filtro a{
+    text-decoration: none;
+    transition: .1s;
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+    .filtro a:hover{
+      transform: scale(1.1);
+    }
+    .filtro a:visited{
+      color: #000;
+    }
+
+.topCart{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 4rem;
+}
+
+.itemCart{
+  font-size: 20px;
+  margin: 3rem;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  align-items: center;
+} 
+  .itemCart img{
+    width: 14%;
+  }
+
+  hr {
+    border-color: #fcc522;
+    color: #fcc522;
+  }

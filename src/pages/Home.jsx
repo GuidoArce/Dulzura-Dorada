@@ -5,10 +5,12 @@ import Galery from '../components/Galery';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Cart from '../components/Cart'
+import CartContextProvider from '../components/CartContext'
 
 
 const Home = () => {
     return (
+        <CartContextProvider>
         <BrowserRouter>
         <Navbar/>
             <Routes>
@@ -20,6 +22,7 @@ const Home = () => {
             </Routes>
         <Footer/>
         </BrowserRouter>
+        </CartContextProvider>
     );
 }
 
