@@ -4,8 +4,6 @@ import { CartContext } from "./CartContext"
 import '../App.css';
 import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
-import { Reddit } from "@mui/icons-material";
-import { red } from "@mui/material/colors";
 
 const Cart = () => {
     const test = useContext(CartContext)
@@ -18,7 +16,7 @@ const Cart = () => {
             <Link to='/'><button className="boton">mas productos</button></Link>
             {
                 (test.cartList.length > 0)
-                ? <button className="boton" onClick={test.removeList}>borrar todo</button>
+                ? <button className="boton" onClick={test.clear}>borrar todo</button>
                 : <p>Tu carrito esta vacío</p>
             }
             </div>
@@ -34,7 +32,7 @@ const Cart = () => {
                                 <p>Cantidad: {item.cantItem}</p>
                                 <p>Precio: {item.priceItem}</p>
                                 <IconButton aria-label="delete">
-                                    <ClearIcon color="warning" onClick={() => test.deleteItem(item.idItem)} />
+                                    <ClearIcon color="warning" onClick={() => test.removeItem(item.idItem)} />
                                 </IconButton>
                             </div>
                             <hr/>
