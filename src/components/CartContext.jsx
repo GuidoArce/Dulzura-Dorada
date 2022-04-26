@@ -20,6 +20,9 @@ const CartContextProvider = ({children}) => {
             ]);
         } else {
             found.cantItem += cantidad;
+            setCarlist([
+                ...setCarlist
+            ]);
         }
     }
 
@@ -32,8 +35,31 @@ const CartContextProvider = ({children}) => {
         setCarlist (result);
     }
 
+    const totalItem = (idItem) => {
+        let total = cartList.map(item => item.idItem).indexOf(idItem);
+        return cartList[total].priceItem * cartList[total].cantItem;
+    }
+
+    const subTotal = () => {
+        let sub = cartList.map(item => totalItem(item.idItem));
+        return sub.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
+
+    const impuestos = () => {
+        return subTotal() * 0.21;
+    }
+
+    const total = () => {
+        return subTotal();
+    }
+
+    const cantItems = () => {
+        let cantidad = cartList.map(item => item.cantItem);
+        return cantidad.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return(
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, cantItems, totalItem, subTotal, impuestos, total}}>
             {children}
         </CartContext.Provider>
     )
