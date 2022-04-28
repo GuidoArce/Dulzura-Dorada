@@ -1,28 +1,26 @@
-import customFetch from "../utils/customFetch.js";
 import {useEffect, useState} from 'react';
 import ItemList from "./ItemList.jsx";
 import '../App.css';
 import { useParams, Link } from "react-router-dom";
-const {products} = require ("../utils/products.js")
-
-
+import { firestoreFetch } from "../utils/firestoreFetch.js";
 
 const Catalogo = () => {
     const [datos, setDatos] = useState ([]);
     const {idCategory} = useParams ();
 
     useEffect(() => {
-        if (idCategory === undefined) {
-        customFetch (1000, products)
-            .then(result => setDatos (result))
-            .catch(error => console.log(error))
-        } else {
-            customFetch (1000, products.filter(item => item.categoryId === parseInt(idCategory)))
-            .then(result => setDatos(result))
-            .catch(error => console.log(error))
-        }
+        firestoreFetch(idCategory)
+        .then(result => setDatos(result))
+        .catch(error => console.log (error));
     }, [idCategory]);
 
+
+    useEffect(() =>{
+        return (() =>{
+            setDatos([]);
+        });
+    }, []);
+    
     return (
         <>
         <h1>NUESTROS PRODUCTOS</h1>

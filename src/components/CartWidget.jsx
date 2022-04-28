@@ -10,7 +10,7 @@ export default function SimpleBadge() {
 
   return (
     <div className='bolsa'>
-    <Badge badgeContent={ notificacion.cantItems() } color="primary">
+    <Badge badgeContent={ notificacion.cantItems() } color="warning">
       <LocalMallIcon color="action"/>
     </Badge>
     </div>
