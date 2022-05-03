@@ -5,9 +5,51 @@ import '../App.css';
 import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
 import Numero from "../utils/numero";
+import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
+import db from '../utils/firebaseConfig';
 
 const Cart = () => {
-    const test = useContext(CartContext)
+    const test = useContext(CartContext);
+
+    const createOrder = () => {
+        const itemsForDB = test.cartList.map(item => ({
+            id: item.idItem,
+            title: item.nameItem,
+            price: item.priceItem,
+            quantity: item.cantItem
+        }));
+    
+        test.cartList.forEach(async (item) => {
+            const itemRef = doc(db, "products", item.idItem);
+            await updateDoc(itemRef, {
+            stock: increment(-item.cantItem)
+            });
+        });
+    
+        let order = {
+        buyer: {
+            name: "Guido Arce",
+            email: "guido.arce.federico@gmail.com",
+            phone: "549 2494549578"
+            },
+            total: test.total(),
+            items: itemsForDB,
+            date: serverTimestamp(),
+        };
+        
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+    
+        createOrderInFirestore()
+            .then(result => alert('Tu orden fue creada!.\n Por favor, anota el numero de la orden por cualquier inconveniente\n\nOrder ID: ' + result.id))
+            .catch(err => console.log(err));
+    
+        test.clear();
+    
+    }
 
     return (
         <>
@@ -61,7 +103,7 @@ const Cart = () => {
                         <h3>Total</h3>
                         <p><Numero number={test.subTotal() + test.impuestos()}/></p>
                     </div>
-                    <button className="boton">Terminar compra</button>
+                    <button onClick={createOrder} className="boton">Terminar compra</button>
                 </div>
             }
         </div>
