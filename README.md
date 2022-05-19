@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Dulzura Dorada
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_El proyecto es un E-Commerce de un pequeño emprendimiento de venta de miel y sus derivados._
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### `npm start`
+### Instalación 🔧
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+_Necesitarás algunas tecnologías para poder realizar pruebas a este proyecto_
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_Instalar ReactJS_
 
-### `npm test`
+```
+npm install react
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Instalar react-router-dom_
 
-### `npm run build`
+```
+npm installa react-router-dom
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Instalar Material-UI_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install material-design-icons
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Instalar Firebase para manipular datos de backend_
 
-### `npm run eject`
+```
+npm install firebase
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Ejecutando las pruebas ⚙️
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Una vez modificado el codigo, insertar en la consola de git "npm start" para ver los resultados en el navegador_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Construido con 🛠️
 
-## Learn More
+_HTML_
+_CSS_
+_JAVASCRIPT_
+_REACT JS_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autores ✒️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-### Code Splitting
+* **Guido Arce** - *Trabajo Inicial* - [garce](https://www.instagram.com/chinoarce0/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Expresiones de Gratitud 🎁
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Comenta a otros sobre este proyecto 📢
+* Muchas gracias al equipo de CODERHOUSE, especialmente a Alex y a David que amablemente me instruyeron y ayudaron a desarrollar este sitio web. 
